@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace Altatzion.Api
+namespace Altazion.Api
 {
     /// <summary>
     /// Represents a connection to the API
