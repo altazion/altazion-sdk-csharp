@@ -4,10 +4,25 @@ using System.Collections.Generic;
 
 namespace Altazion.Api.Data
 {
+	///<summary>
+	///Objet de données ArticleQuantite
+	///</summary>
 	public class ArticleQuantite
 	{
+		///<summary>
+		///Obtient ou définit la valeur ArticleGuid
+		///</summary>
 		public Guid ArticleGuid{ get; set; }
+
+		///<summary>
+		///Obtient ou définit la valeur Quantite
+		///</summary>
 		public decimal Quantite{ get; set; }
+
+		///<summary>
+		///Obtient ou définit la valeur ArticlesDependant
+		///</summary>
 		public ArticleQuantiteDependant[] ArticlesDependant{ get; set; }
+
 	}
 }
