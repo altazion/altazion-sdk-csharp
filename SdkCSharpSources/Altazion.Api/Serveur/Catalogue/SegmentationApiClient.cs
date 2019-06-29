@@ -7,16 +7,31 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Segmentation
+	///sur l'api Serveur
+	///</summary>
 	public class SegmentationApiClient : ApiClientBase
 	{
 		public SegmentationApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeSegmentations(string type)
+		/// <summary>
+		/// Récupère la liste de toutes les segmentations
+		///</summary>
+		public SegmentationData[] GetListeSegmentations(string type)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenirSegmentation(int segPk)
+
+		/// <summary>
+		/// Récupère une segmentation et ses filles
+		///</summary>
+		public SegmentationDataDetails GetObtenirSegmentation(int segPk)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

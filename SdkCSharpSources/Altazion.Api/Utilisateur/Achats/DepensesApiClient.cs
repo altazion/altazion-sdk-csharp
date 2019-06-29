@@ -7,6 +7,11 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Achats
 {
+
+	///<summary>
+	///Client api pour le domaine Achats / Dépenses
+	///sur l'api Utilisateur
+	///</summary>
 	public class DepensesApiClient : ApiClientBase
 	{
 		public DepensesApiClient(ApiConnection connection) : base(connection)

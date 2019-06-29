@@ -7,16 +7,31 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Marques
+	///sur l'api Utilisateur
+	///</summary>
 	public class MarquesApiClient : ApiClientBase
 	{
 		public MarquesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeDesMarques()
+		/// <summary>
+		/// Récupère la liste de toutes les marques
+		///</summary>
+		public MarqueData[] GetListeDesMarques()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenirUneMarque(int marqueId)
+
+		/// <summary>
+		/// Obtient les informations d'une marque
+		///</summary>
+		public MarqueData GetObtenirUneMarque(int marqueId)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

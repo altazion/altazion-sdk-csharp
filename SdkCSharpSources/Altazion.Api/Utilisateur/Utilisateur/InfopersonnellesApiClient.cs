@@ -7,13 +7,23 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Utilisateur
 {
+
+	///<summary>
+	///Client api pour le domaine Utilisateur / Info. personnelles
+	///sur l'api Utilisateur
+	///</summary>
 	public class InfopersonnellesApiClient : ApiClientBase
 	{
 		public InfopersonnellesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetMessages(bool inclureTraite,bool uniquementDirect,Guid? type)
+		/// <summary>
+		/// Obtient les messages envoyés à l'utilisateur
+		///</summary>
+		public Message[] GetMessages(bool inclureTraite, bool uniquementDirect, Guid? type)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

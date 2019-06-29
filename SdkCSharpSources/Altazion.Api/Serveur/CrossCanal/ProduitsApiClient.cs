@@ -7,13 +7,23 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.CrossCanal
 {
+
+	///<summary>
+	///Client api pour le domaine Cross Canal / Produits
+	///sur l'api Serveur
+	///</summary>
 	public class ProduitsApiClient : ApiClientBase
 	{
 		public ProduitsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void PostStockEnMagasin(String[] references)
+		/// <summary>
+		/// Récupère le stock d'un ensemble de produits dans tous les magasins.
+		///</summary>
+		public RechercheStockMagasins[] PostStockEnMagasin(String[] references)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

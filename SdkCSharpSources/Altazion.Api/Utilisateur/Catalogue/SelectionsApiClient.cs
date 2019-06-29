@@ -7,19 +7,39 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Selections
+	///sur l'api Utilisateur
+	///</summary>
 	public class SelectionsApiClient : ApiClientBase
 	{
 		public SelectionsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeSelections()
+		/// <summary>
+		/// Récupère la liste des sélections.
+		///</summary>
+		public VitrineData[] GetListeSelections()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetDetailsSelection(Guid guid)
+
+		/// <summary>
+		/// Récupère le détail d'une sélection.
+		///</summary>
+		public VitrineContentData GetDetailsSelection(Guid guid)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostModifsimple(VitrineEditData data)
+
+		/// <summary>
+		/// Modifier une selection.
+		///</summary>
+		public VitrineContentData PostModifsimple(VitrineEditData data)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

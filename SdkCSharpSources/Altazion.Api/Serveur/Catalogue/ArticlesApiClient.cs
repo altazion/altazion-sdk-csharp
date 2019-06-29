@@ -7,31 +7,71 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Articles
+	///sur l'api Serveur
+	///</summary>
 	public class ArticlesApiClient : ApiClientBase
 	{
 		public ArticlesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetObtenirConfig()
+		/// <summary>
+		/// Récupère les infos de configuration du catalogue.
+		///</summary>
+		public CatalogueConfig GetConfig()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenir(string reference)
+
+		/// <summary>
+		/// Récupère le détail d'un produit.
+		///</summary>
+		public ArticlePhygitalDetail[] Get(string reference)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenir(Guid guid)
+
+		/// <summary>
+		/// Récupère le détail d'un produit.
+		///</summary>
+		public ArticlePhygitalDetail[] Get(Guid guid)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostObtenir(Guid[] guids)
+
+		/// <summary>
+		/// Récupère le détail d'un produit.
+		///</summary>
+		public ArticlePhygitalDetail[] Get(Guid[] guids)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetRechercheRapide(string critere,int nb)
+
+		/// <summary>
+		/// Lance un quick search sur les articles.
+		///</summary>
+		public SearchResult[] Rechercher(string critere, int nb)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetArticlesParSegmentation(int segpk,int sitpk)
+
+		/// <summary>
+		/// Récupère tous les articles d'une segmentation.
+		///</summary>
+		public ArticlePhygitalBase[] GetArticlesParSegmentation(int segpk, int sitpk)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostDisponibilites(Guid[] guids)
+
+		/// <summary>
+		/// Récupère la disponibilité d'un produit.
+		///</summary>
+		public ArticleDispo[] GetDispos(Guid[] guids)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

@@ -7,31 +7,71 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Commercial
 {
+
+	///<summary>
+	///Client api pour le domaine Commercial / Campagnes
+	///sur l'api Utilisateur
+	///</summary>
 	public class CampagnesApiClient : ApiClientBase
 	{
 		public CampagnesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeDesCampagnes()
+		/// <summary>
+		/// Récupère le liste des campagnes actives
+		///</summary>
+		public CampagnesData[] GetListeDesCampagnes()
 		{
+			throw new NotImplementedException();
 		}
-		public void PostModifierCampagne(CampagnesData data)
+
+		/// <summary>
+		/// Permet de modifier/créer une campagne. La méthode PATCH permet uniquement de modifier une campagne.  La méthode POST met à jour une campagne si vous fournissez son Guid ou en crée une nouvelle si  vous laissez le Guid à Guid.Empty
+		///</summary>
+		public Guid PostModifierCampagne(CampagnesData data)
 		{
+			throw new NotImplementedException();
 		}
-		public void PatchModifierCampagne(CampagnesData data)
+
+		/// <summary>
+		/// Permet de modifier/créer une campagne. La méthode PATCH permet uniquement de modifier une campagne.  La méthode POST met à jour une campagne si vous fournissez son Guid ou en crée une nouvelle si  vous laissez le Guid à Guid.Empty
+		///</summary>
+		public Guid PatchModifierCampagne(CampagnesData data)
 		{
+			throw new NotImplementedException();
 		}
-		public void DeleteArchiverCampagne(Guid guid)
+
+		/// <summary>
+		/// Archive une campagne
+		///</summary>
+		public bool DeleteArchiverCampagne(Guid guid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetListeDesTypes(Guid? destination)
+
+		/// <summary>
+		/// Récupère la liste des types d'opérations possibles
+		///</summary>
+		public TypeOpeComm[] GetListeDesTypes(Guid? destination)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetListeDestinations()
+
+		/// <summary>
+		/// Récupère la liste des destinations
+		///</summary>
+		public Destination[] GetListeDestinations()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenirPlanning(DateTime? min,DateTime? max,Guid? campagneGuid)
+
+		/// <summary>
+		/// Récupère le planning des opérations commerciales
+		///</summary>
+		public OperationData[] GetObtenirPlanning(DateTime? min, DateTime? max, Guid? campagneGuid)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

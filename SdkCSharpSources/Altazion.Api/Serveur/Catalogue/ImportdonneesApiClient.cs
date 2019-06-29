@@ -7,13 +7,23 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Import données
+	///sur l'api Serveur
+	///</summary>
 	public class ImportdonneesApiClient : ApiClientBase
 	{
 		public ImportdonneesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetImporterArticles()
+		/// <summary>
+		/// Envoie une liste d'article dans les tables d'imports
+		///</summary>
+		public int GetImporterArticles()
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

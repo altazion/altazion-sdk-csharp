@@ -7,19 +7,39 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Parametres
 {
+
+	///<summary>
+	///Client api pour le domaine Paramètres / Options
+	///sur l'api Serveur
+	///</summary>
 	public class OptionsApiClient : ApiClientBase
 	{
 		public OptionsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetOptionsliste(string section,string group,string option)
+		/// <summary>
+		/// Obtient les options systèmes
+		///</summary>
+		public SysParamsOptions[] GetOptionsliste(string section, string group, string option)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetOptionsset(string section,string group,string option,string value)
+
+		/// <summary>
+		/// Definit une option système
+		///</summary>
+		public SysParamsOptions GetOptionsset(string section, string group, string option, string value)
 		{
+			throw new NotImplementedException();
 		}
-		public void DeleteOptionsunset(string section,string group,string option)
+
+		/// <summary>
+		/// Efface une option système
+		///</summary>
+		public SysParamsOptions DeleteOptionsunset(string section, string group, string option)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

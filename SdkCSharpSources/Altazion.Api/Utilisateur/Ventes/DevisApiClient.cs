@@ -7,25 +7,55 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Ventes
 {
+
+	///<summary>
+	///Client api pour le domaine Ventes / Devis
+	///sur l'api Utilisateur
+	///</summary>
 	public class DevisApiClient : ApiClientBase
 	{
 		public DevisApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeEnCours(bool avecLigne)
+		/// <summary>
+		/// Récupère la liste des devis 'en cours'
+		///</summary>
+		public Devis[] GetListeEnCours(bool avecLigne)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenir(long devisId)
+
+		/// <summary>
+		/// Récupère une dernière révision de devis
+		///</summary>
+		public Devis GetObtenir(long devisId)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenir(string devisNumero)
+
+		/// <summary>
+		/// Récupère une dernière révision de devis
+		///</summary>
+		public Devis GetObtenir(string devisNumero)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostValider(long devisId,DevisAcceptationInfo info)
+
+		/// <summary>
+		/// Valide un devis (enregistre son acceptation par le client
+		///</summary>
+		public Devis PostValider(long devisId, DevisAcceptationInfo info)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostAjouter(InfosLigneDevis infos)
+
+		/// <summary>
+		/// Ajoute une ligne à un devis
+		///</summary>
+		public bool PostAjouter(InfosLigneDevis infos)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

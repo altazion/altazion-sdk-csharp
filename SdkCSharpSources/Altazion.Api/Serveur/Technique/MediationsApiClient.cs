@@ -7,31 +7,71 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Technique
 {
+
+	///<summary>
+	///Client api pour le domaine Technique / Médiations
+	///sur l'api Serveur
+	///</summary>
 	public class MediationsApiClient : ApiClientBase
 	{
 		public MediationsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetDefinitions()
+		/// <summary>
+		/// Récupère la liste des définitions de médiations existantes.
+		///</summary>
+		public MediationDefinition[] GetDefinitions()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetEtatDUneMediation(Guid mediationGuid)
+
+		/// <summary>
+		/// Récupère l'état d'une médiation
+		///</summary>
+		public MediationStatus GetEtatDUneMediation(Guid mediationGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetListeDesMediations(DateTime? minDate,DateTime? maxDate,Guid? definitionGuid)
+
+		/// <summary>
+		/// Récupère la liste des instances de médiations entre deux dates
+		///</summary>
+		public MediationStatus[] GetListeDesMediations(DateTime? minDate, DateTime? maxDate, Guid? definitionGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetDesactiverDefinition(Guid mediationDefinitionGuid)
+
+		/// <summary>
+		/// Désactive une définition.
+		///</summary>
+		public bool GetDesactiverDefinition(Guid mediationDefinitionGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetActiverDefinition(Guid mediationDefinitionGuid)
+
+		/// <summary>
+		/// Active une définition.
+		///</summary>
+		public bool GetActiverDefinition(Guid mediationDefinitionGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetRelancer(Guid mediationGuid)
+
+		/// <summary>
+		/// Relance une médiation.
+		///</summary>
+		public MediationStatus GetRelancer(Guid mediationGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetIgnorer(Guid mediationGuid)
+
+		/// <summary>
+		/// Ignore la médiation et efface son éventuel message d'erreur.
+		///</summary>
+		public bool GetIgnorer(Guid mediationGuid)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

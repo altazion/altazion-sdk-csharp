@@ -7,16 +7,31 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.Parametres
 {
+
+	///<summary>
+	///Client api pour le domaine Paramètres / 
+	///sur l'api Serveur
+	///</summary>
 	public class ApiClient : ApiClientBase
 	{
 		public ApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetRaisonJuridique()
+		/// <summary>
+		/// Récupère les informations sur la raison juridique
+		///</summary>
+		public RaisonJuridique GetRaisonJuridique()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetSitesWebs()
+
+		/// <summary>
+		/// Récupère la liste des sites webs déclarés pour la raison juridique active.
+		///</summary>
+		public SiteWebData[] GetSitesWebs()
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

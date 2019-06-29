@@ -7,16 +7,31 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Partenaire.Operationspartenaires
 {
+
+	///<summary>
+	///Client api pour le domaine Opérations partenaires / Tenants
+	///sur l'api Partenaire
+	///</summary>
 	public class TenantsApiClient : ApiClientBase
 	{
 		public TenantsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListe()
+		/// <summary>
+		/// Récupère la liste des tenants associés à votre compte partenaire
+		///</summary>
+		public TenantData[] GetListe()
 		{
+			throw new NotImplementedException();
 		}
-		public void PutTenant(CreationRjsData data,bool synchrone)
+
+		/// <summary>
+		/// Crée un nouveau tenant associé à votre compte partenaire
+		///</summary>
+		public NewTenantData PutTenant(CreationRjsData data, bool synchrone)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

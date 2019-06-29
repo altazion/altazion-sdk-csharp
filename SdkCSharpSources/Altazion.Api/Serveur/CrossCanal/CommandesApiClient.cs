@@ -7,46 +7,111 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Serveur.CrossCanal
 {
+
+	///<summary>
+	///Client api pour le domaine Cross Canal / Commandes
+	///sur l'api Serveur
+	///</summary>
 	public class CommandesApiClient : ApiClientBase
 	{
 		public CommandesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void PutPasserUneCommande(int siteId,Guid magasinGuid,Commande commande)
+		/// <summary>
+		/// Crée une nouvelle commande destinée à un magasin.
+		///</summary>
+		public Guid PutPasserUneCommande(int siteId, Guid magasinGuid, Commande commande)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetCommandesEnAttente(int siteId)
+
+		/// <summary>
+		/// Récupère la liste des 50 dernières commandes 'magasin'
+		///</summary>
+		public CommandeEnAttente[] GetCommandesEnAttente(int siteId)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetCommandesEnAttente(int siteId,Guid magasinGuid)
+
+		/// <summary>
+		/// Récupère la liste des 50 dernières commandes 'magasin'
+		///</summary>
+		public CommandeEnAttente[] GetCommandesEnAttente(int siteId, Guid magasinGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetDetails(int siteId,string numero)
+
+		/// <summary>
+		/// Récupère le détail d'une commande
+		///</summary>
+		public BonCommandeDetails GetDetails(int siteId, string numero)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetDetails(int siteId,Guid orderGuid)
+
+		/// <summary>
+		/// Récupère le détail d'une commande
+		///</summary>
+		public BonCommandeDetails GetDetails(int siteId, Guid orderGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetTerminer(int siteId,Guid orderGuid)
+
+		/// <summary>
+		/// Marque une commande comme terminée
+		///</summary>
+		public BonCommandeDetails GetTerminer(int siteId, Guid orderGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void PutPaiementsimple(int siteId,Guid bcdGuid)
+
+		/// <summary>
+		/// Valide le règlement associé à une commande
+		///</summary>
+		public BonCommandeDetails PutPaiementsimple(int siteId, Guid bcdGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void PutDeclareEnlevement(int siteId,Guid bcdGuid)
+
+		/// <summary>
+		/// Déclare l'enlèvement d'une commande
+		///</summary>
+		public BonCommandeDetails PutDeclareEnlevement(int siteId, Guid bcdGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetModesDeReglements(int siteId)
+
+		/// <summary>
+		/// Retourne les modes de règlements possibles.
+		///</summary>
+		public ModeReglement[] GetModesDeReglements(int siteId)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostConnexionClient(int siteId,LogClient log)
+
+		/// <summary>
+		/// Connecte un client sur le site.
+		///</summary>
+		public InfoBaseClient PostConnexionClient(int siteId, LogClient log)
 		{
+			throw new NotImplementedException();
 		}
-		public void PostConnexionClient(int siteId,LogClient log,Guid clientGuid)
+
+		/// <summary>
+		/// Connecte un client sur le site.
+		///</summary>
+		public InfoBaseClient PostConnexionClient(int siteId, LogClient log, Guid clientGuid)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetVerifEmail(int siteId,string email)
+
+		/// <summary>
+		/// Connecte un client sur le site.
+		///</summary>
+		public MailCheckResult GetVerifEmail(int siteId, string email)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }

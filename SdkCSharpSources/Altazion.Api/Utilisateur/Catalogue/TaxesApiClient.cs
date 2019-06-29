@@ -7,19 +7,39 @@ using Newtonsoft.Json;
 
 namespace Altazion.Api.Utilisateur.Catalogue
 {
+
+	///<summary>
+	///Client api pour le domaine Catalogue / Taxes
+	///sur l'api Utilisateur
+	///</summary>
 	public class TaxesApiClient : ApiClientBase
 	{
 		public TaxesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
-		public void GetListeDesTaxes()
+		/// <summary>
+		/// Récupère la liste de toute les Taxes
+		///</summary>
+		public TaxeData[] GetListeDesTaxes()
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenirUneTaxe(Guid articleId)
+
+		/// <summary>
+		/// Obtient les informations de la taxe d'un article
+		///</summary>
+		public TaxeData GetObtenirUneTaxe(Guid articleId)
 		{
+			throw new NotImplementedException();
 		}
-		public void GetObtenirUneTaxe(string articleRef)
+
+		/// <summary>
+		/// Obtient les informations de la taxe d'un article
+		///</summary>
+		public TaxeData GetObtenirUneTaxe(string articleRef)
 		{
+			throw new NotImplementedException();
 		}
+
 	}
 }
