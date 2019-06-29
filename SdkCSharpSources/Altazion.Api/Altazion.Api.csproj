@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <Authors>Altazion</Authors>
     <Description>Package to call Altazion's APIs or to handle events coming from the solution.</Description>
     <PackageProjectUrl>https://www.altazion.com/</PackageProjectUrl>
