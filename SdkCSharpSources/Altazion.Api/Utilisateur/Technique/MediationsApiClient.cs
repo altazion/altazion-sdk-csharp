@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Technique
 	///Client api pour le domaine Technique / Médiations
 	///sur l'api Utilisateur
 	///</summary>
-	public class MediationsApiClient : ApiClientBase
+	public partial class MediationsApiClient : ApiClientBase
 	{
 		public MediationsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des définitions de médiations existantes.
 		///</summary>

@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Catalogue
 	///Client api pour le domaine Catalogue / Marques
 	///sur l'api Utilisateur
 	///</summary>
-	public class MarquesApiClient : ApiClientBase
+	public partial class MarquesApiClient : ApiClientBase
 	{
 		public MarquesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste de toutes les marques
 		///</summary>

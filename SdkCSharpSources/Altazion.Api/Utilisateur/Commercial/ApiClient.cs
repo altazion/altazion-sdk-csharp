@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Commercial
 	///Client api pour le domaine Commercial / 
 	///sur l'api Utilisateur
 	///</summary>
-	public class ApiClient : ApiClientBase
+	public partial class ApiClient : ApiClientBase
 	{
 		public ApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Sauvegarde un contenu article
 		///</summary>

@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Commercial
 	///Client api pour le domaine Commercial / Campagnes
 	///sur l'api Serveur
 	///</summary>
-	public class CampagnesApiClient : ApiClientBase
+	public partial class CampagnesApiClient : ApiClientBase
 	{
 		public CampagnesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère le liste des campagnes actives
 		///</summary>

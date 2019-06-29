@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Catalogue
 	///Client api pour le domaine Catalogue / Selections
 	///sur l'api Utilisateur
 	///</summary>
-	public class SelectionsApiClient : ApiClientBase
+	public partial class SelectionsApiClient : ApiClientBase
 	{
 		public SelectionsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des sélections.
 		///</summary>

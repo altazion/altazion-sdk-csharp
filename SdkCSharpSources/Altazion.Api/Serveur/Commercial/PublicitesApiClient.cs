@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Commercial
 	///Client api pour le domaine Commercial / Publicités
 	///sur l'api Serveur
 	///</summary>
-	public class PublicitesApiClient : ApiClientBase
+	public partial class PublicitesApiClient : ApiClientBase
 	{
 		public PublicitesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Créé une nouvelle opération commerciale de type publicité
 		///</summary>

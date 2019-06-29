@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.CrossCanal
 	///Client api pour le domaine Cross Canal / Produits
 	///sur l'api Serveur
 	///</summary>
-	public class ProduitsApiClient : ApiClientBase
+	public partial class ProduitsApiClient : ApiClientBase
 	{
 		public ProduitsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère le stock d'un ensemble de produits dans tous les magasins.
 		///</summary>

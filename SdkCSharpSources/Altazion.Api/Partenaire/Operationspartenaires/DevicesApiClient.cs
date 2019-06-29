@@ -12,11 +12,12 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 	///Client api pour le domaine Opérations partenaires / Devices
 	///sur l'api Partenaire
 	///</summary>
-	public class DevicesApiClient : ApiClientBase
+	public partial class DevicesApiClient : ApiClientBase
 	{
 		public DevicesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des devices pour un tenant
 		///</summary>

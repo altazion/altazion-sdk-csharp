@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Parametres
 	///Client api pour le domaine Paramètres / 
 	///sur l'api Serveur
 	///</summary>
-	public class ApiClient : ApiClientBase
+	public partial class ApiClient : ApiClientBase
 	{
 		public ApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère les informations sur la raison juridique
 		///</summary>

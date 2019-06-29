@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Parametres
 	///Client api pour le domaine Paramètres / Options
 	///sur l'api Serveur
 	///</summary>
-	public class OptionsApiClient : ApiClientBase
+	public partial class OptionsApiClient : ApiClientBase
 	{
 		public OptionsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Obtient les options systèmes
 		///</summary>

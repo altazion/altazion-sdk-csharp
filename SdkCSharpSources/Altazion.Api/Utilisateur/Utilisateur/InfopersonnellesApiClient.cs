@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Utilisateur
 	///Client api pour le domaine Utilisateur / Info. personnelles
 	///sur l'api Utilisateur
 	///</summary>
-	public class InfopersonnellesApiClient : ApiClientBase
+	public partial class InfopersonnellesApiClient : ApiClientBase
 	{
 		public InfopersonnellesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Obtient les messages envoyés à l'utilisateur
 		///</summary>

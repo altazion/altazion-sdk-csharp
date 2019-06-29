@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Catalogue
 	///Client api pour le domaine Catalogue / Taxes
 	///sur l'api Serveur
 	///</summary>
-	public class TaxesApiClient : ApiClientBase
+	public partial class TaxesApiClient : ApiClientBase
 	{
 		public TaxesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste de toute les Taxes
 		///</summary>

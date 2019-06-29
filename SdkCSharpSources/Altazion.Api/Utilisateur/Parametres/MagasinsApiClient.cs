@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Parametres
 	///Client api pour le domaine Paramètres / Magasins
 	///sur l'api Utilisateur
 	///</summary>
-	public class MagasinsApiClient : ApiClientBase
+	public partial class MagasinsApiClient : ApiClientBase
 	{
 		public MagasinsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des magasins non archivés.
 		///</summary>

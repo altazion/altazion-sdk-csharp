@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Ventes
 	///Client api pour le domaine Ventes / Devis
 	///sur l'api Utilisateur
 	///</summary>
-	public class DevisApiClient : ApiClientBase
+	public partial class DevisApiClient : ApiClientBase
 	{
 		public DevisApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des devis 'en cours'
 		///</summary>

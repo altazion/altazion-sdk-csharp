@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Catalogue
 	///Client api pour le domaine Catalogue / Import données
 	///sur l'api Serveur
 	///</summary>
-	public class ImportdonneesApiClient : ApiClientBase
+	public partial class ImportdonneesApiClient : ApiClientBase
 	{
 		public ImportdonneesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Envoie une liste d'article dans les tables d'imports
 		///</summary>

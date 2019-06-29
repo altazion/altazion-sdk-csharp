@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Achats
 	///Client api pour le domaine Achats / Fournisseurs
 	///sur l'api Utilisateur
 	///</summary>
-	public class FournisseursApiClient : ApiClientBase
+	public partial class FournisseursApiClient : ApiClientBase
 	{
 		public FournisseursApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste de tous les fournisseurs
 		///</summary>

@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.CrossCanal
 	///Client api pour le domaine Cross Canal / Commandes
 	///sur l'api Serveur
 	///</summary>
-	public class CommandesApiClient : ApiClientBase
+	public partial class CommandesApiClient : ApiClientBase
 	{
 		public CommandesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Crée une nouvelle commande destinée à un magasin.
 		///</summary>

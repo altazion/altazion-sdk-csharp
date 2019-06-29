@@ -12,11 +12,12 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 	///Client api pour le domaine Opérations partenaires / Tenants
 	///sur l'api Partenaire
 	///</summary>
-	public class TenantsApiClient : ApiClientBase
+	public partial class TenantsApiClient : ApiClientBase
 	{
 		public TenantsApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste des tenants associés à votre compte partenaire
 		///</summary>

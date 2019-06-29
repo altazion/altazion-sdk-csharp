@@ -12,11 +12,12 @@ namespace Altazion.Api.Serveur.Catalogue
 	///Client api pour le domaine Catalogue / Articles
 	///sur l'api Serveur
 	///</summary>
-	public class ArticlesApiClient : ApiClientBase
+	public partial class ArticlesApiClient : ApiClientBase
 	{
 		public ArticlesApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère les infos de configuration du catalogue.
 		///</summary>

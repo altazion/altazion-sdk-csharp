@@ -12,11 +12,12 @@ namespace Altazion.Api.Utilisateur.Catalogue
 	///Client api pour le domaine Catalogue / Segmentation
 	///sur l'api Utilisateur
 	///</summary>
-	public class SegmentationApiClient : ApiClientBase
+	public partial class SegmentationApiClient : ApiClientBase
 	{
 		public SegmentationApiClient(ApiConnection connection) : base(connection)
 		{
 		}
+
 		/// <summary>
 		/// Récupère la liste de toutes les segmentations
 		///</summary>
