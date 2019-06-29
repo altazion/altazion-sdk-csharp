@@ -37,6 +37,5 @@ steps:
   inputs:
     command: 'push'
     packagesToPush: '**/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '/7524834c-f302-43f2-bb64-eb412aa0f374'
-    allowPackageConflicts: true
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'Main Nuget'
