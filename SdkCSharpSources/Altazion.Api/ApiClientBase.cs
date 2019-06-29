@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Security;
 using System.Text;
@@ -71,11 +72,11 @@ namespace Altazion.Api
         }
 
 
-        protected R Get<R>(string apiUrl) where R : class, new()
+        protected R Get<R>(string apiUrl) 
         {
             return Get<R>(Connection, apiUrl);
         }
-        protected R Get<R>(ApiConnection creds, string apiUrl) where R : class, new()
+        protected R Get<R>(ApiConnection creds, string apiUrl) 
         {
             string reply = Get(creds, apiUrl);
             return JsonConvert.DeserializeObject<R>(reply);
@@ -144,6 +145,25 @@ namespace Altazion.Api
             }
 
             return reply;
+        }
+
+        protected string ConvertDataToUrlFragment(object data, Type objectType)
+        {
+            var baseType = Nullable.GetUnderlyingType(objectType);
+            if (baseType != null)
+            {
+                if (data == null)
+                    return "";
+                else
+                    objectType = baseType;
+            }
+
+            switch (objectType.FullName)
+            {
+                case "System.DateTime":
+                    return ((DateTime)data).ToString("yyyy-MM-dd'T'HH:mm:ss.fffzzz", DateTimeFormatInfo.InvariantInfo);
+            }
+            return data.ToString();
         }
 
     }

@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public VitrineData[] GetListeSelections()
 		{
-			throw new NotImplementedException();
+			return base.Get<VitrineData[]>($"app/catalogue/selections");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public VitrineContentData GetDetailsSelection(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Get<VitrineContentData>($"app/catalogue/selections/{ base.ConvertDataToUrlFragment(guid, guid.GetType()) }/content");
 		}
 
 		/// <summary>

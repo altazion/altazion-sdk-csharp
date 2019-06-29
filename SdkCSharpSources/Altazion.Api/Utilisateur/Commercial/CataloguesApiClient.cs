@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public OpeCatalogueData GetDetails(Guid opeGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<OpeCatalogueData>($"api/commercial/opecom/catalogue/{ base.ConvertDataToUrlFragment(opeGuid, opeGuid.GetType()) }");
 		}
 
 	}

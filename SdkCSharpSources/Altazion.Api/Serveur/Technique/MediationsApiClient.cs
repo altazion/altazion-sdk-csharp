@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public MediationDefinition[] GetDefinitions()
 		{
-			throw new NotImplementedException();
+			return base.Get<MediationDefinition[]>($"app/mediations/definitions");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public MediationStatus GetEtatDUneMediation(Guid mediationGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<MediationStatus>($"app/mediations/{ base.ConvertDataToUrlFragment(mediationGuid, mediationGuid.GetType()) }/status");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public MediationStatus[] GetListeDesMediations(DateTime? minDate, DateTime? maxDate, Guid? definitionGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<MediationStatus[]>($"app/mediations/status?minDate={ base.ConvertDataToUrlFragment(minDate, minDate.GetType()) }&maxDate={ base.ConvertDataToUrlFragment(maxDate, maxDate.GetType()) }&definitionGuid={ base.ConvertDataToUrlFragment(definitionGuid, definitionGuid.GetType()) }");
 		}
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public bool GetDesactiverDefinition(Guid mediationDefinitionGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<bool>($"app/mediations/definitions/{ base.ConvertDataToUrlFragment(mediationDefinitionGuid, mediationDefinitionGuid.GetType()) }/disable");
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public bool GetActiverDefinition(Guid mediationDefinitionGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<bool>($"app/mediations/definitions/{ base.ConvertDataToUrlFragment(mediationDefinitionGuid, mediationDefinitionGuid.GetType()) }/enable");
 		}
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public MediationStatus GetRelancer(Guid mediationGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<MediationStatus>($"app/mediations/{ base.ConvertDataToUrlFragment(mediationGuid, mediationGuid.GetType()) }/restart");
 		}
 
 		/// <summary>
@@ -70,7 +70,7 @@ namespace Altazion.Api.Serveur.Technique
 		///</summary>
 		public bool GetIgnorer(Guid mediationGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<bool>($"app/mediations/{ base.ConvertDataToUrlFragment(mediationGuid, mediationGuid.GetType()) }/ignore");
 		}
 
 	}

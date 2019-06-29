@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public bool GetActiver(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Get<bool>($"?guid={ base.ConvertDataToUrlFragment(guid, guid.GetType()) }");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public bool GetDesactiver(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Get<bool>($"?guid={ base.ConvertDataToUrlFragment(guid, guid.GetType()) }");
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public PubliciteData GetDetailsPub(Guid opeGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<PubliciteData>($"api/commercial/opecom/publicite/{ base.ConvertDataToUrlFragment(opeGuid, opeGuid.GetType()) }/base");
 		}
 
 		/// <summary>
@@ -70,7 +70,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public PubliciteXmlData GetDetailsPubXML(Guid opeGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<PubliciteXmlData>($"api/commercial/opecom/publicite/{ base.ConvertDataToUrlFragment(opeGuid, opeGuid.GetType()) }/xml");
 		}
 
 		/// <summary>
@@ -86,7 +86,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public UploadUrl GetUploadurl(Guid opeGuid, string extension, int etape)
 		{
-			throw new NotImplementedException();
+			return base.Get<UploadUrl>($"?opeGuid={ base.ConvertDataToUrlFragment(opeGuid, opeGuid.GetType()) }&extension={ base.ConvertDataToUrlFragment(extension, extension.GetType()) }&etape={ base.ConvertDataToUrlFragment(etape, etape.GetType()) }");
 		}
 
 	}

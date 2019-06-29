@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public CommandeEnAttente[] GetCommandesEnAttente(int siteId)
 		{
-			throw new NotImplementedException();
+			return base.Get<CommandeEnAttente[]>($"app/crosscanal/commandes/enattente/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/instore/local");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public CommandeEnAttente[] GetCommandesEnAttente(int siteId, Guid magasinGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<CommandeEnAttente[]>($"app/crosscanal/commandes/enattente/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/instore/{ base.ConvertDataToUrlFragment(magasinGuid, magasinGuid.GetType()) }");
 		}
 
 		/// <summary>
@@ -46,7 +46,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails GetDetails(int siteId, string numero)
 		{
-			throw new NotImplementedException();
+			return base.Get<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(numero, numero.GetType()) }");
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails GetDetails(int siteId, Guid orderGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(orderGuid, orderGuid.GetType()) }");
 		}
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails GetTerminer(int siteId, Guid orderGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(orderGuid, orderGuid.GetType()) }/terminer");
 		}
 
 		/// <summary>
@@ -86,7 +86,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public ModeReglement[] GetModesDeReglements(int siteId)
 		{
-			throw new NotImplementedException();
+			return base.Get<ModeReglement[]>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/modesreglements");
 		}
 
 		/// <summary>
@@ -110,7 +110,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public MailCheckResult GetVerifEmail(int siteId, string email)
 		{
-			throw new NotImplementedException();
+			return base.Get<MailCheckResult>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/clients/checkemail?email={ base.ConvertDataToUrlFragment(email, email.GetType()) }");
 		}
 
 	}

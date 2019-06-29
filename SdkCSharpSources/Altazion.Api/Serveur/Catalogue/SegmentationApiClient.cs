@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public SegmentationData[] GetListeSegmentations(string type)
 		{
-			throw new NotImplementedException();
+			return base.Get<SegmentationData[]>($"app/catalogue/segmentations/all?type={ base.ConvertDataToUrlFragment(type, type.GetType()) }");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public SegmentationDataDetails GetObtenirSegmentation(int segPk)
 		{
-			throw new NotImplementedException();
+			return base.Get<SegmentationDataDetails>($"app/catalogue/segmentations/{ base.ConvertDataToUrlFragment(segPk, segPk.GetType()) }");
 		}
 
 	}

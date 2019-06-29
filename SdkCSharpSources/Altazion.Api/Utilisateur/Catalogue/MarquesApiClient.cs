@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public MarqueData[] GetListeDesMarques()
 		{
-			throw new NotImplementedException();
+			return base.Get<MarqueData[]>($"api/catalogue/marques/all");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public MarqueData GetObtenirUneMarque(int marqueId)
 		{
-			throw new NotImplementedException();
+			return base.Get<MarqueData>($"api/catalogue/marques/{ base.ConvertDataToUrlFragment(marqueId, marqueId.GetType()) }");
 		}
 
 	}

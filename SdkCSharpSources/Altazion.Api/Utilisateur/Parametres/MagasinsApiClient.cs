@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public MagasinBase[] GetListe(bool uniquementCrossCanal)
 		{
-			throw new NotImplementedException();
+			return base.Get<MagasinBase[]>($"api/parametres/magasins?uniquementCrossCanal={ base.ConvertDataToUrlFragment(uniquementCrossCanal, uniquementCrossCanal.GetType()) }");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public MagasinBase[] GetRechercher(string paypk, string zip)
 		{
-			throw new NotImplementedException();
+			return base.Get<MagasinBase[]>($"api/parametres/magasins/recherche/{ base.ConvertDataToUrlFragment(paypk, paypk.GetType()) }/{ base.ConvertDataToUrlFragment(zip, zip.GetType()) }");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public MagasinBase GetObtenir(string code)
 		{
-			throw new NotImplementedException();
+			return base.Get<MagasinBase>($"api/parametres/magasins/{ base.ConvertDataToUrlFragment(code, code.GetType()) }");
 		}
 
 	}

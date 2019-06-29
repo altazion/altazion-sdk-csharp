@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Utilisateur
 		///</summary>
 		public Message[] GetMessages(bool inclureTraite, bool uniquementDirect, Guid? type)
 		{
-			throw new NotImplementedException();
+			return base.Get<Message[]>($"api/security/users/me/messages?inclureTraite={ base.ConvertDataToUrlFragment(inclureTraite, inclureTraite.GetType()) }&uniquementDirect={ base.ConvertDataToUrlFragment(uniquementDirect, uniquementDirect.GetType()) }&type={ base.ConvertDataToUrlFragment(type, type.GetType()) }");
 		}
 
 	}

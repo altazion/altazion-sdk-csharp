@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public TaxeData[] GetListeDesTaxes()
 		{
-			throw new NotImplementedException();
+			return base.Get<TaxeData[]>($"app/catalogue/taxes/all");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public TaxeData GetObtenirUneTaxe(Guid articleId)
 		{
-			throw new NotImplementedException();
+			return base.Get<TaxeData>($"app/catalogue/articles/taxes/{ base.ConvertDataToUrlFragment(articleId, articleId.GetType()) }");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public TaxeData GetObtenirUneTaxe(string articleRef)
 		{
-			throw new NotImplementedException();
+			return base.Get<TaxeData>($"app/catalogue/articles/taxes/{ base.ConvertDataToUrlFragment(articleRef, articleRef.GetType()) }");
 		}
 
 	}

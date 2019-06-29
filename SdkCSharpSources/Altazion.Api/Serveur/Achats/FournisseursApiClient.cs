@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Achats
 		///</summary>
 		public FournisseurData[] GetListeFournisseurs(TypeFournisseur? type)
 		{
-			throw new NotImplementedException();
+			return base.Get<FournisseurData[]>($"app/achats/fournisseurs/all?type={ base.ConvertDataToUrlFragment(type, type.GetType()) }");
 		}
 
 	}

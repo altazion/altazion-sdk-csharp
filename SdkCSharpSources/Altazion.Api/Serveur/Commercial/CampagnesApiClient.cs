@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Commercial
 		///</summary>
 		public CampagnesData[] GetListeDesCampagnes()
 		{
-			throw new NotImplementedException();
+			return base.Get<CampagnesData[]>($"app/commercial/campagnes");
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace Altazion.Api.Serveur.Commercial
 		///</summary>
 		public TypeOpeComm[] GetListeDesTypes(Guid? destination)
 		{
-			throw new NotImplementedException();
+			return base.Get<TypeOpeComm[]>($"app/commercial/typesope?destination={ base.ConvertDataToUrlFragment(destination, destination.GetType()) }");
 		}
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Altazion.Api.Serveur.Commercial
 		///</summary>
 		public Destination[] GetListeDestinations()
 		{
-			throw new NotImplementedException();
+			return base.Get<Destination[]>($"app/commercial/destinations");
 		}
 
 		/// <summary>
@@ -70,7 +70,7 @@ namespace Altazion.Api.Serveur.Commercial
 		///</summary>
 		public OperationData[] GetObtenirPlanning(DateTime? min, DateTime? max, Guid? campagneGuid)
 		{
-			throw new NotImplementedException();
+			return base.Get<OperationData[]>($"app/commercial/planning?min={ base.ConvertDataToUrlFragment(min, min.GetType()) }&max={ base.ConvertDataToUrlFragment(max, max.GetType()) }&campagneGuid={ base.ConvertDataToUrlFragment(campagneGuid, campagneGuid.GetType()) }");
 		}
 
 	}

@@ -22,7 +22,7 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 		///</summary>
 		public TenantData[] GetListe()
 		{
-			throw new NotImplementedException();
+			return base.Get<TenantData[]>($"api/partners/saas/tenants");
 		}
 
 		/// <summary>

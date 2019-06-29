@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public Devis[] GetListeEnCours(bool avecLigne)
 		{
-			throw new NotImplementedException();
+			return base.Get<Devis[]>($"api/ventes/devis/encours?avecLigne={ base.ConvertDataToUrlFragment(avecLigne, avecLigne.GetType()) }");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public Devis GetObtenir(long devisId)
 		{
-			throw new NotImplementedException();
+			return base.Get<Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }");
 		}
 
 		/// <summary>
@@ -38,7 +38,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public Devis GetObtenir(string devisNumero)
 		{
-			throw new NotImplementedException();
+			return base.Get<Devis>($"api/ventes/devis/revision/{ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }?devisNumero={ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }");
 		}
 
 		/// <summary>

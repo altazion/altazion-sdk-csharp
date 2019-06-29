@@ -22,7 +22,7 @@ namespace Altazion.Api.Serveur.Parametres
 		///</summary>
 		public RaisonJuridique GetRaisonJuridique()
 		{
-			throw new NotImplementedException();
+			return base.Get<RaisonJuridique>($"app/tenant");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Serveur.Parametres
 		///</summary>
 		public SiteWebData[] GetSitesWebs()
 		{
-			throw new NotImplementedException();
+			return base.Get<SiteWebData[]>($"app/tenant/websites");
 		}
 
 	}

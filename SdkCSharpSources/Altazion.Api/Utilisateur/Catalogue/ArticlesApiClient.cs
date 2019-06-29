@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public CatalogueConfig GetConfig()
 		{
-			throw new NotImplementedException();
+			return base.Get<CatalogueConfig>($"api/catalogue/config");
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public SearchResult[] Rechercher(string critere, int nb)
 		{
-			throw new NotImplementedException();
+			return base.Get<SearchResult[]>($"api/catalogue/search/quick?critere={ base.ConvertDataToUrlFragment(critere, critere.GetType()) }&nb={ base.ConvertDataToUrlFragment(nb, nb.GetType()) }");
 		}
 
 		/// <summary>
@@ -62,7 +62,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public ArticlePhygitalBase[] GetArticlesParSegmentation(int segpk, int sitpk)
 		{
-			throw new NotImplementedException();
+			return base.Get<ArticlePhygitalBase[]>($"api/catalogue/articles/parsegmentation/{ base.ConvertDataToUrlFragment(segpk, segpk.GetType()) }?sit_pk={ base.ConvertDataToUrlFragment(sitpk, sitpk.GetType()) }");
 		}
 
 		/// <summary>

@@ -22,7 +22,7 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 		///</summary>
 		public DeviceData[] GetListeDevices(int tenantId)
 		{
-			throw new NotImplementedException();
+			return base.Get<DeviceData[]>($"api/partners/saas/tenants/{ base.ConvertDataToUrlFragment(tenantId, tenantId.GetType()) }/devices");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 		///</summary>
 		public TypeDevice[] GetListeDesTypes(int tenantId, string kind)
 		{
-			throw new NotImplementedException();
+			return base.Get<TypeDevice[]>($"api/partners/saas/tenants/{ base.ConvertDataToUrlFragment(tenantId, tenantId.GetType()) }/devicestypes?kind={ base.ConvertDataToUrlFragment(kind, kind.GetType()) }");
 		}
 
 		/// <summary>

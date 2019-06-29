@@ -22,7 +22,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public SysParamsOptions[] GetOptionsliste(string section, string group, string option)
 		{
-			throw new NotImplementedException();
+			return base.Get<SysParamsOptions[]>($"api/settings/system/options?section={ base.ConvertDataToUrlFragment(section, section.GetType()) }&group={ base.ConvertDataToUrlFragment(group, group.GetType()) }&option={ base.ConvertDataToUrlFragment(option, option.GetType()) }");
 		}
 
 		/// <summary>
@@ -30,7 +30,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public SysParamsOptions GetOptionsset(string section, string group, string option, string value)
 		{
-			throw new NotImplementedException();
+			return base.Get<SysParamsOptions>($"api/settings/system/options/set?section={ base.ConvertDataToUrlFragment(section, section.GetType()) }&group={ base.ConvertDataToUrlFragment(group, group.GetType()) }&option={ base.ConvertDataToUrlFragment(option, option.GetType()) }&value={ base.ConvertDataToUrlFragment(value, value.GetType()) }");
 		}
 
 		/// <summary>
