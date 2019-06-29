@@ -36,7 +36,7 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    packagesToPush: '**/altazion*.nupkg;!**/*.symbols.nupkg'
     nuGetFeedType: 'internal'
     publishVstsFeed: '/7524834c-f302-43f2-bb64-eb412aa0f374'
     allowPackageConflicts: true
