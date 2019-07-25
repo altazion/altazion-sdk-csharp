@@ -51,6 +51,13 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid? Uxid{ get; set; }
 
+			public static AnnulationCommandeInterneEventData TryParse(string jsonData)
+			{
+				AnnulationCommandeInterneEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",AnnulationCommandeinterne, out ret))
+					return null;
+				return ret;
+			}
 		}
 		/// <summary>
 		/// Cet évènement est déclenché lorsqu'une commande est annulée
@@ -100,6 +107,13 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid? Uxid{ get; set; }
 
+			public static AnnulationCommandeEventData TryParse(string jsonData)
+			{
+				AnnulationCommandeEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",AnnulationCommande, out ret))
+					return null;
+				return ret;
+			}
 		}
 		/// <summary>
 		/// Cet évènement est déclenché lorsqu'une commande progresse dans les rails de préparation
@@ -116,6 +130,13 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid BcdGuid{ get; set; }
 
+			public static ProgressionCommandeEventData TryParse(string jsonData)
+			{
+				ProgressionCommandeEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ProgressionCommande, out ret))
+					return null;
+				return ret;
+			}
 		}
 	}
 }

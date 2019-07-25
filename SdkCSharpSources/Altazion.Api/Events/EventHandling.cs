@@ -1,9 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace Altazion.Api.Events
+namespace Altazion.Events
 {
-    public static class EventHandling
+    internal static class EventHandling
     {
 
         public static bool TryDeserialize<T>(string data, string eventCategory, string eventKind, out T retValue) where T : class, new()

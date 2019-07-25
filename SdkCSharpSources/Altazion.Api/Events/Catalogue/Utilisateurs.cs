@@ -37,6 +37,13 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public string UserType{ get; set; }
 
+			public static ArchivageUserEventData TryParse(string jsonData)
+			{
+				ArchivageUserEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ArchivageUtilisateur, out ret))
+					return null;
+				return ret;
+			}
 		}
 		/// <summary>
 		/// Cet évènement est déclenché lorsqu'un utilisateur est créé
@@ -68,6 +75,13 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public string UserType{ get; set; }
 
+			public static CreationUserEventData TryParse(string jsonData)
+			{
+				CreationUserEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",CreationUtilisateur, out ret))
+					return null;
+				return ret;
+			}
 		}
 		/// <summary>
 		/// Cet évènement est déclenché lorsqu'un utilisateur est modifié
@@ -99,6 +113,13 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public string UserType{ get; set; }
 
+			public static ModificationUserEventData TryParse(string jsonData)
+			{
+				ModificationUserEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ModificationUtilisateur, out ret))
+					return null;
+				return ret;
+			}
 		}
 	}
 }

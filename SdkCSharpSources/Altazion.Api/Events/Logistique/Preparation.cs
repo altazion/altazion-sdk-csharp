@@ -32,6 +32,13 @@ namespace Altazion.Events.Logistique
 			///</summary>
 			public string BprType{ get; set; }
 
+			public static PreparationCommandeEventData TryParse(string jsonData)
+			{
+				PreparationCommandeEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",PreparationCommande, out ret))
+					return null;
+				return ret;
+			}
 		}
 	}
 }

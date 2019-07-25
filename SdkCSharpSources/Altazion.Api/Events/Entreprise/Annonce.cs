@@ -27,6 +27,13 @@ namespace Altazion.Events.Entreprise
 			///</summary>
 			public DateTimeOffset DateDebut{ get; set; }
 
+			public static PublicationAnnonceEventData TryParse(string jsonData)
+			{
+				PublicationAnnonceEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",Publicationduneannonce, out ret))
+					return null;
+				return ret;
+			}
 		}
 	}
 }

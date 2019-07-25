@@ -62,6 +62,13 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid? MagasinAssocieGuid{ get; set; }
 
+			public static CommandeValideeEventData TryParse(string jsonData)
+			{
+				CommandeValideeEventData ret = null;
+				 if(!EventHandling.TryDeserialize(jsonData,"e/commerce",ValidationCommande, out ret))
+					return null;
+				return ret;
+			}
 		}
 	}
 }
