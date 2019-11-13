@@ -80,6 +80,21 @@ namespace Altazion.Api.Data
 		public string HorairesServiceClient{ get; set; }
 
 		///<summary>
+		///Obtient ou définit la valeur DefaultCP
+		///</summary>
+		public string DefaultCP{ get; set; }
+
+		///<summary>
+		///Obtient ou définit la valeur DefaultPaysPk
+		///</summary>
+		public string DefaultPaysPk{ get; set; }
+
+		///<summary>
+		///Obtient ou définit la valeur DefaultDevise
+		///</summary>
+		public Guid? DefaultDevise{ get; set; }
+
+		///<summary>
 		///Obtient ou définit la valeur SiteParentId
 		///</summary>
 		public System.Int32? SiteParentId{ get; set; }

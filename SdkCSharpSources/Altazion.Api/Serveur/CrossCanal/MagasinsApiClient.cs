@@ -37,7 +37,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		/// <summary>
 		/// Récupère un magasin depuis son code.
 		///</summary>
-		public MagasinInfo GetObtenir(string code)
+		public MagasinInfo Get(string code)
 		{
 			return base.Get<MagasinInfo>($"app/magasins/{ base.ConvertDataToUrlFragment(code, code.GetType()) }");
 		}

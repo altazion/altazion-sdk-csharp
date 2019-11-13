@@ -29,7 +29,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		/// <summary>
 		/// Récupère une segmentation et ses filles
 		///</summary>
-		public SegmentationDataDetails GetObtenirSegmentation(int segPk)
+		public SegmentationDataDetails GetSegmentation(int segPk)
 		{
 			return base.Get<SegmentationDataDetails>($"app/catalogue/segmentations/{ base.ConvertDataToUrlFragment(segPk, segPk.GetType()) }");
 		}

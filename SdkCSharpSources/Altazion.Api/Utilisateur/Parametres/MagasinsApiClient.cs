@@ -37,7 +37,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		/// <summary>
 		/// Récupère un magasin depuis son code.
 		///</summary>
-		public MagasinBase GetObtenir(string code)
+		public MagasinBase Get(string code)
 		{
 			return base.Get<MagasinBase>($"api/parametres/magasins/{ base.ConvertDataToUrlFragment(code, code.GetType()) }");
 		}

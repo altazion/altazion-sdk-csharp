@@ -29,7 +29,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		/// <summary>
 		/// Obtient les informations d'une marque
 		///</summary>
-		public MarqueData GetObtenirUneMarque(int marqueId)
+		public MarqueData GetUneMarque(int marqueId)
 		{
 			return base.Get<MarqueData>($"api/catalogue/marques/{ base.ConvertDataToUrlFragment(marqueId, marqueId.GetType()) }");
 		}

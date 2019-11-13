@@ -29,7 +29,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		/// <summary>
 		/// Obtient les informations de la taxe d'un article
 		///</summary>
-		public TaxeData GetObtenirUneTaxe(Guid articleId)
+		public TaxeData GetUneTaxe(Guid articleId)
 		{
 			return base.Get<TaxeData>($"app/catalogue/articles/taxes/{ base.ConvertDataToUrlFragment(articleId, articleId.GetType()) }");
 		}
@@ -37,7 +37,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		/// <summary>
 		/// Obtient les informations de la taxe d'un article
 		///</summary>
-		public TaxeData GetObtenirUneTaxe(string articleRef)
+		public TaxeData GetUneTaxe(string articleRef)
 		{
 			return base.Get<TaxeData>($"app/catalogue/articles/taxes/{ base.ConvertDataToUrlFragment(articleRef, articleRef.GetType()) }");
 		}

@@ -27,7 +27,7 @@ namespace Altazion.Events.Entreprise
 			///</summary>
 			public DateTimeOffset DateDebut{ get; set; }
 
-			public static PublicationAnnonceEventData TryParse(string jsonData)
+			public static PublicationAnnonceEventData Parse(string jsonData)
 			{
 				PublicationAnnonceEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",Publicationduneannonce, out ret))

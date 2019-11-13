@@ -42,7 +42,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public System.Int32? SegPkRemplacement{ get; set; }
 
-			public static SuppressionSegmentationEventData TryParse(string jsonData)
+			public static SuppressionSegmentationEventData Parse(string jsonData)
 			{
 				SuppressionSegmentationEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",SuppressionSegmentation, out ret))
@@ -80,7 +80,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public System.Int32? SegParentSegPk{ get; set; }
 
-			public static CreationSegmentationEventData TryParse(string jsonData)
+			public static CreationSegmentationEventData Parse(string jsonData)
 			{
 				CreationSegmentationEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",CreationSegmentation, out ret))
@@ -118,7 +118,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public System.Int32? SegParentSegPk{ get; set; }
 
-			public static ModificationSegmentationEventData TryParse(string jsonData)
+			public static ModificationSegmentationEventData Parse(string jsonData)
 			{
 				ModificationSegmentationEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ModificationSegmentation, out ret))

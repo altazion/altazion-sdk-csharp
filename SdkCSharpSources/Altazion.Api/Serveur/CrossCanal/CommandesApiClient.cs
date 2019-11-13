@@ -61,9 +61,9 @@ namespace Altazion.Api.Serveur.CrossCanal
 		/// <summary>
 		/// Marque une commande comme terminée
 		///</summary>
-		public BonCommandeDetails GetTerminer(int siteId, Guid orderGuid)
+		public BonCommandeDetails PostTerminer(int siteId, Guid orderGuid)
 		{
-			return base.Get<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(orderGuid, orderGuid.GetType()) }/terminer");
+			throw new NotImplementedException();
 		}
 
 		/// <summary>

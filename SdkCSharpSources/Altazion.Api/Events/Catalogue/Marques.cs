@@ -37,7 +37,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public bool EstInterne{ get; set; }
 
-			public static CreationMarqueEventData TryParse(string jsonData)
+			public static CreationMarqueEventData Parse(string jsonData)
 			{
 				CreationMarqueEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",CreationMarque, out ret))
@@ -75,7 +75,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public bool EstInterne{ get; set; }
 
-			public static ModificationMarqueEventData TryParse(string jsonData)
+			public static ModificationMarqueEventData Parse(string jsonData)
 			{
 				ModificationMarqueEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ModificationMarque, out ret))
@@ -113,7 +113,7 @@ namespace Altazion.Events.Catalogue
 			///</summary>
 			public bool EstInterne{ get; set; }
 
-			public static SuppressionMarqueEventData TryParse(string jsonData)
+			public static SuppressionMarqueEventData Parse(string jsonData)
 			{
 				SuppressionMarqueEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",SuppressionMarque, out ret))

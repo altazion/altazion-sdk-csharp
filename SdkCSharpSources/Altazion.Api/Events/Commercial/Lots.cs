@@ -37,7 +37,7 @@ namespace Altazion.Events.Commercial
 			///</summary>
 			public Guid PmlGplGuid{ get; set; }
 
-			public static CreationLotEventData TryParse(string jsonData)
+			public static CreationLotEventData Parse(string jsonData)
 			{
 				CreationLotEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/commercial",CreationLot, out ret))
@@ -75,7 +75,7 @@ namespace Altazion.Events.Commercial
 			///</summary>
 			public Guid PmlGplGuid{ get; set; }
 
-			public static ModificationLotEventData TryParse(string jsonData)
+			public static ModificationLotEventData Parse(string jsonData)
 			{
 				ModificationLotEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/commercial",ModificationLot, out ret))
@@ -113,7 +113,7 @@ namespace Altazion.Events.Commercial
 			///</summary>
 			public Guid PmlGplGuid{ get; set; }
 
-			public static ArchivageLotEventData TryParse(string jsonData)
+			public static ArchivageLotEventData Parse(string jsonData)
 			{
 				ArchivageLotEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/commercial",ArchivageLot, out ret))

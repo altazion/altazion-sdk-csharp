@@ -69,7 +69,7 @@ namespace Altazion.Api.Serveur.Commercial
 		/// <summary>
 		/// Récupère le planning des opérations commerciales
 		///</summary>
-		public OperationData[] GetObtenirPlanning(DateTime? min, DateTime? max, Guid? campagneGuid)
+		public OperationData[] GetPlanning(DateTime? min, DateTime? max, Guid? campagneGuid)
 		{
 			return base.Get<OperationData[]>($"app/commercial/planning?min={ base.ConvertDataToUrlFragment(min, min.GetType()) }&max={ base.ConvertDataToUrlFragment(max, max.GetType()) }&campagneGuid={ base.ConvertDataToUrlFragment(campagneGuid, campagneGuid.GetType()) }");
 		}

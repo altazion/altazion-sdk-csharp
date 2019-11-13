@@ -59,5 +59,10 @@ namespace Altazion.Api.Data
 		///</summary>
 		public Guid? PartenaireGuid{ get; set; }
 
+		///<summary>
+		///Obtient ou définit la valeur Telephone
+		///</summary>
+		public string Telephone{ get; set; }
+
 	}
 }

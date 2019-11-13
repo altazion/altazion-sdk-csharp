@@ -51,7 +51,7 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid? Uxid{ get; set; }
 
-			public static AnnulationCommandeInterneEventData TryParse(string jsonData)
+			public static AnnulationCommandeInterneEventData Parse(string jsonData)
 			{
 				AnnulationCommandeInterneEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",AnnulationCommandeinterne, out ret))
@@ -107,7 +107,7 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid? Uxid{ get; set; }
 
-			public static AnnulationCommandeEventData TryParse(string jsonData)
+			public static AnnulationCommandeEventData Parse(string jsonData)
 			{
 				AnnulationCommandeEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",AnnulationCommande, out ret))
@@ -130,7 +130,7 @@ namespace Altazion.Events.Ventes
 			///</summary>
 			public Guid BcdGuid{ get; set; }
 
-			public static ProgressionCommandeEventData TryParse(string jsonData)
+			public static ProgressionCommandeEventData Parse(string jsonData)
 			{
 				ProgressionCommandeEventData ret = null;
 				 if(!EventHandling.TryDeserialize(jsonData,"e/rp",ProgressionCommande, out ret))

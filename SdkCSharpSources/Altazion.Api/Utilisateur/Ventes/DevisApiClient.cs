@@ -29,7 +29,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		/// <summary>
 		/// Récupère une dernière révision de devis
 		///</summary>
-		public Devis GetObtenir(long devisId)
+		public Devis Get(long devisId)
 		{
 			return base.Get<Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }");
 		}
@@ -37,7 +37,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		/// <summary>
 		/// Récupère une dernière révision de devis
 		///</summary>
-		public Devis GetObtenir(string devisNumero)
+		public Devis Get(string devisNumero)
 		{
 			return base.Get<Devis>($"api/ventes/devis/revision/{ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }?devisNumero={ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }");
 		}
