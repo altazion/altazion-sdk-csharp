@@ -23,7 +23,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public Guid PutPasserUneCommande(int siteId, Guid magasinGuid, Commande commande)
 		{
-			throw new NotImplementedException();
+			return base.Put<Commande,Guid>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/instore/{ base.ConvertDataToUrlFragment(magasinGuid, magasinGuid.GetType()) }",commande);
 		}
 
 		/// <summary>
@@ -63,7 +63,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails PostTerminer(int siteId, Guid orderGuid)
 		{
-			throw new NotImplementedException();
+			return base.Post<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(orderGuid, orderGuid.GetType()) }/terminer");
 		}
 
 		/// <summary>
@@ -71,7 +71,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails PutPaiementsimple(int siteId, Guid bcdGuid)
 		{
-			throw new NotImplementedException();
+			return base.Put<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(bcdGuid, bcdGuid.GetType()) }/paiement/confirmer");
 		}
 
 		/// <summary>
@@ -79,7 +79,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public BonCommandeDetails PutDeclareEnlevement(int siteId, Guid bcdGuid)
 		{
-			throw new NotImplementedException();
+			return base.Put<BonCommandeDetails>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/{ base.ConvertDataToUrlFragment(bcdGuid, bcdGuid.GetType()) }/paiement/confirmer");
 		}
 
 		/// <summary>
@@ -95,7 +95,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public InfoBaseClient PostConnexionClient(int siteId, LogClient log)
 		{
-			throw new NotImplementedException();
+			return base.Post<LogClient,InfoBaseClient>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/clients/connexion",log);
 		}
 
 		/// <summary>
@@ -103,7 +103,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public InfoBaseClient PostConnexionClient(int siteId, LogClient log, Guid clientGuid)
 		{
-			throw new NotImplementedException();
+			return base.Post<LogClient,InfoBaseClient>($"app/crosscanal/commandes/{ base.ConvertDataToUrlFragment(siteId, siteId.GetType()) }/clients/connexion/byguid/{ base.ConvertDataToUrlFragment(clientGuid, clientGuid.GetType()) }",log);
 		}
 
 		/// <summary>

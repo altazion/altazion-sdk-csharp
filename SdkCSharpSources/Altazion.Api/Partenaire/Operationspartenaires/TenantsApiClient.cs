@@ -31,7 +31,7 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 		///</summary>
 		public NewTenantData PutTenant(CreationRjsData data, bool synchrone)
 		{
-			throw new NotImplementedException();
+			return base.Put<CreationRjsData,NewTenantData>($"api/partners/saas/tenants?synchrone={ base.ConvertDataToUrlFragment(synchrone, synchrone.GetType()) }",data);
 		}
 
 	}

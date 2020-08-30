@@ -39,7 +39,7 @@ namespace Altazion.Api.Utilisateur.Parametres
 		///</summary>
 		public SysParamsOptions DeleteOptionsunset(string section, string group, string option)
 		{
-			throw new NotImplementedException();
+			return base.Delete<SysParamsOptions>($"api/settings/system/options/set?section={ base.ConvertDataToUrlFragment(section, section.GetType()) }&group={ base.ConvertDataToUrlFragment(group, group.GetType()) }&option={ base.ConvertDataToUrlFragment(option, option.GetType()) }");
 		}
 
 	}

@@ -31,7 +31,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public ArticlePhygitalDetail[] Get(string reference)
 		{
-			throw new NotImplementedException();
+			return base.Get<ArticlePhygitalDetail[]>($"api/catalogue/articles/{ base.ConvertDataToUrlFragment(reference, reference.GetType()) }/data");
 		}
 
 		/// <summary>
@@ -39,7 +39,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public ArticlePhygitalDetail[] Get(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Get<ArticlePhygitalDetail[]>($"api/catalogue/articles/{ base.ConvertDataToUrlFragment(guid, guid.GetType()) }/data");
 		}
 
 		/// <summary>
@@ -47,7 +47,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public ArticlePhygitalDetail[] Get(Guid[] guids)
 		{
-			throw new NotImplementedException();
+			return base.Post<Guid[],ArticlePhygitalDetail[]>($"api/catalogue/articles/data",guids);
 		}
 
 		/// <summary>
@@ -71,7 +71,7 @@ namespace Altazion.Api.Utilisateur.Catalogue
 		///</summary>
 		public ArticleDispo[] GetDispos(Guid[] guids)
 		{
-			throw new NotImplementedException();
+			return base.Post<Guid[],ArticleDispo[]>($"api/catalogue/articles/dispos/centrale",guids);
 		}
 
 	}

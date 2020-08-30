@@ -23,7 +23,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public bool PostEditer(OpeCatalogue item)
 		{
-			throw new NotImplementedException();
+			return base.Post<OpeCatalogue,bool>($"api/commercial/opecom/catalogue",item);
 		}
 
 		/// <summary>

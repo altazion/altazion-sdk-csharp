@@ -21,17 +21,17 @@ namespace Altazion.Api.Serveur.Commercial
 		/// <summary>
 		/// Sauvegarde un contenu article
 		///</summary>
-		public bool PostSauvegardeContenuArticle(ContenuData data)
+		public bool PostContenuArticle(ContenuData data)
 		{
-			throw new NotImplementedException();
+			return base.Post<ContenuData,bool>($"app/commercial/contenus",data);
 		}
 
 		/// <summary>
 		/// Supprime un contenu article
 		///</summary>
-		public bool DeleteSupprimeContenuArticle()
+		public bool SupprimerContenuArticle()
 		{
-			throw new NotImplementedException();
+			return base.Delete<ContenuData,bool>($"app/commercial/contenus",data);
 		}
 
 	}

@@ -31,23 +31,23 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public Guid PostModifierCampagne(CampagnesData data)
 		{
-			throw new NotImplementedException();
+			return base.Post<CampagnesData,Guid>($"",data);
 		}
 
 		/// <summary>
 		/// Permet de modifier/créer une campagne. La méthode PATCH permet uniquement de modifier une campagne.  La méthode POST met à jour une campagne si vous fournissez son Guid ou en crée une nouvelle si  vous laissez le Guid à Guid.Empty
 		///</summary>
-		public Guid PatchModifierCampagne(CampagnesData data)
+		public Guid ModifierCampagne(CampagnesData data)
 		{
-			throw new NotImplementedException();
+			return base.Patch<CampagnesData,Guid>($"",data);
 		}
 
 		/// <summary>
 		/// Archive une campagne
 		///</summary>
-		public bool DeleteArchiverCampagne(Guid guid)
+		public bool ArchiverCampagne(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Delete<bool>($"?guid={ base.ConvertDataToUrlFragment(guid, guid.GetType()) }");
 		}
 
 		/// <summary>

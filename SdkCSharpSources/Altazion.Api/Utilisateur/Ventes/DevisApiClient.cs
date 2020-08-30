@@ -39,7 +39,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public Devis Get(string devisNumero)
 		{
-			return base.Get<Devis>($"api/ventes/devis/revision/{ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }?devisNumero={ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }");
+			return base.Get<Devis>($"api/ventes/devis/revision/{ base.ConvertDataToUrlFragment(devisNumero, devisNumero.GetType()) }");
 		}
 
 		/// <summary>
@@ -47,7 +47,47 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public Devis PostValider(long devisId, DevisAcceptationInfo info)
 		{
-			throw new NotImplementedException();
+			return base.Post<DevisAcceptationInfo,Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }/accepter",info);
+		}
+
+		/// <summary>
+		/// Archiver un devis
+		///</summary>
+		public Devis PostArchiver(long devisId, DevisAcceptationInfo info)
+		{
+			return base.Post<DevisAcceptationInfo,Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }/archiver",info);
+		}
+
+		/// <summary>
+		/// Facturer un devis
+		///</summary>
+		public Devis PostFacturer(long devisId, DevisFacture devis)
+		{
+			return base.Post<DevisFacture,Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }/facturer",devis);
+		}
+
+		/// <summary>
+		/// Réviser un devis
+		///</summary>
+		public Devis PostReviser(long devisId, DevisAcceptationInfo info)
+		{
+			return base.Post<DevisAcceptationInfo,Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }/reviser",info);
+		}
+
+		/// <summary>
+		/// Créer un devis
+		///</summary>
+		public Devis Creer(DevisInsert devis)
+		{
+			return base.Put<DevisInsert,Devis>($"api/ventes/devis/creer",devis);
+		}
+
+		/// <summary>
+		/// Modifier un devis
+		///</summary>
+		public Devis Modifier(DevisInsert devis, long devisId)
+		{
+			return base.Patch<DevisInsert,Devis>($"api/ventes/devis/{ base.ConvertDataToUrlFragment(devisId, devisId.GetType()) }/modifier",devis);
 		}
 
 		/// <summary>
@@ -55,7 +95,7 @@ namespace Altazion.Api.Utilisateur.Ventes
 		///</summary>
 		public bool PostAjouter(InfosLigneDevis infos)
 		{
-			throw new NotImplementedException();
+			return base.Post<InfosLigneDevis,bool>($"api/ventes/devis/lignedevis",infos);
 		}
 
 	}

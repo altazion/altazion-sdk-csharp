@@ -39,7 +39,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public VitrineContentData PostModifsimple(VitrineEditData data)
 		{
-			throw new NotImplementedException();
+			return base.Post<VitrineContentData>($"app/catalogue/selections?data={ base.ConvertDataToUrlFragment(data, data.GetType()) }");
 		}
 
 	}

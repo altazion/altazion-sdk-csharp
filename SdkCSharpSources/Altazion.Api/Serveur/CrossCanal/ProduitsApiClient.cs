@@ -23,7 +23,7 @@ namespace Altazion.Api.Serveur.CrossCanal
 		///</summary>
 		public RechercheStockMagasins[] PostStockEnMagasin(String[] references)
 		{
-			throw new NotImplementedException();
+			return base.Post<String[],RechercheStockMagasins[]>($"app/crosscanal/stocks/dispos",references);
 		}
 
 	}

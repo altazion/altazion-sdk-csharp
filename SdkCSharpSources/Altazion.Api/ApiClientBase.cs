@@ -29,6 +29,18 @@ namespace Altazion.Api
             Connection = apiConnection;
         }
 
+        protected string Post(string apiUrl)
+        {
+            return Post<object>(Connection, apiUrl, null);
+        }
+
+        protected R Post<R>(string apiUrl) 
+        {
+            string reply = Post<object>(apiUrl, null);
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
+
         protected string Post<T>(string apiUrl, T data) where T : class
         {
             return Post<T>(Connection, apiUrl, data);
@@ -37,7 +49,13 @@ namespace Altazion.Api
         {
             return NotGet<T>(creds, apiUrl, data, "POST");
         }
-        protected R Post<T, R>(ApiConnection creds, string apiUrl, T data) where R : class, new() where T : class
+        protected R Post<T, R>(string apiUrl, T data) where T : class
+        {
+            string reply = Post<T>(Connection, apiUrl, data);
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
+        protected R Post<T, R>(ApiConnection creds, string apiUrl, T data) where T : class
         {
             string reply = Post<T>(creds, apiUrl, data);
             return JsonConvert.DeserializeObject<R>(reply);
@@ -51,7 +69,14 @@ namespace Altazion.Api
         {
             return NotGet<T>(creds, apiUrl, data, "PUT");
         }
-        protected R Put<T, R>(ApiConnection creds, string apiUrl, T data) where R : class, new() where T : class
+
+        protected R Put<T, R>(string apiUrl, T data) where T : class
+        {
+            string reply = Put<T>(Connection, apiUrl, data);
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
+        protected R Put<T, R>(ApiConnection creds, string apiUrl, T data) where T : class
         {
             string reply = Put<T>(creds, apiUrl, data);
             return JsonConvert.DeserializeObject<R>(reply);
@@ -65,11 +90,48 @@ namespace Altazion.Api
         {
             return NotGet<T>(creds, apiUrl, data, "PATCH");
         }
-        protected R Patch<T, R>(ApiConnection creds, string apiUrl, T data) where R : class, new() where T : class
+        protected R Patch<T, R>(string apiUrl, T data) where T : class
+        {
+            string reply = Patch<T>(Connection, apiUrl, data);
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
+        protected R Patch<T, R>(ApiConnection creds, string apiUrl, T data) where T : class
         {
             string reply = Patch<T>(creds, apiUrl, data);
             return JsonConvert.DeserializeObject<R>(reply);
         }
+
+        protected string Delete<T>(string apiUrl, T data) where T : class
+        {
+            return Delete<T>(Connection, apiUrl, data);
+        }
+        protected string Delete<T>(ApiConnection creds, string apiUrl, T data) where T : class
+        {
+            return NotGet<T>(creds, apiUrl, data, "DELETE");
+        }
+
+        protected R Delete<T, R>(string apiUrl, T data) where T : class
+        {
+            return Delete<T, R>(Connection, apiUrl, data);
+        }
+        protected R Delete<T,R>(ApiConnection creds, string apiUrl, T data) where T : class
+        {
+            string reply = NotGet<T>(creds, apiUrl, data, "DELETE");
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
+        protected R Delete<R>(string apiUrl)
+        {
+            return Delete<R>(Connection, apiUrl);
+        }
+
+        protected R Delete<R>(ApiConnection creds, string apiUrl)
+        {
+            string reply = NotGet(creds, apiUrl, "DELETE");
+            return JsonConvert.DeserializeObject<R>(reply);
+        }
+
 
 
         protected R Get<R>(string apiUrl) 
@@ -120,7 +182,10 @@ namespace Altazion.Api
             return reply;
         }
 
-    
+        protected static string NotGet(ApiConnection creds, string apiUrl, string verb)
+        {
+            return NotGet<object>(creds, apiUrl, null, verb);
+        }
 
         protected static string NotGet<T>(ApiConnection creds, string apiUrl, T data, string verb) where T : class
         {

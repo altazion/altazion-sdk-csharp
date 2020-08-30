@@ -39,5 +39,10 @@ namespace Altazion.Api.Data
 		///</summary>
 		public PosteTypeEcran Kind{ get; set; }
 
+		///<summary>
+		///Obtient ou définit la valeur DeviceCode
+		///</summary>
+		public string DeviceCode{ get; set; }
+
 	}
 }

@@ -5,7 +5,7 @@
     <Authors>Altazion</Authors>
     <Description>Package to call Altazion's APIs or to handle events coming from the solution.</Description>
     <PackageProjectUrl>https://www.altazion.com/</PackageProjectUrl>
-    <Version>19.1113.21</Version>
+    <Version>20.0729.22</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />

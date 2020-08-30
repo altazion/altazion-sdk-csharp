@@ -23,7 +23,7 @@ namespace Altazion.Api.Serveur.Catalogue
 		///</summary>
 		public int GetImporterArticles()
 		{
-			throw new NotImplementedException();
+			return base.Get<int>($"app/catalogue/import");
 		}
 
 	}

@@ -23,7 +23,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public Guid PostCreer(NouvellePublicite publicite)
 		{
-			throw new NotImplementedException();
+			return base.Post<NouvellePublicite,Guid>($"api/commercial/opecom/publicite/new",publicite);
 		}
 
 		/// <summary>
@@ -45,9 +45,9 @@ namespace Altazion.Api.Utilisateur.Commercial
 		/// <summary>
 		/// Supprime une publicité.
 		///</summary>
-		public bool DeleteSupprimer(Guid guid)
+		public bool Supprimer(Guid guid)
 		{
-			throw new NotImplementedException();
+			return base.Delete<bool>($"?guid={ base.ConvertDataToUrlFragment(guid, guid.GetType()) }");
 		}
 
 		/// <summary>
@@ -63,7 +63,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public bool PostEditerPub(Publicite item)
 		{
-			throw new NotImplementedException();
+			return base.Post<Publicite,bool>($"api/commercial/opecom/publicite/base",item);
 		}
 
 		/// <summary>
@@ -79,7 +79,7 @@ namespace Altazion.Api.Utilisateur.Commercial
 		///</summary>
 		public bool PostEditerPubXML(PubliciteXml item)
 		{
-			throw new NotImplementedException();
+			return base.Post<PubliciteXml,bool>($"api/commercial/opecom/publicite/xml",item);
 		}
 
 		/// <summary>

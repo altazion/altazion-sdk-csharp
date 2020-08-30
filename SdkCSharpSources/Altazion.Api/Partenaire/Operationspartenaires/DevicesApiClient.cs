@@ -37,9 +37,9 @@ namespace Altazion.Api.Partenaire.Operationspartenaires
 		/// <summary>
 		/// Créer un nouveau device et en récupère les infos
 		///</summary>
-		public DeviceData PutCreer(int tenantId, DeviceCreationData data)
+		public DeviceData Creer(int tenantId, DeviceCreationData data)
 		{
-			throw new NotImplementedException();
+			return base.Put<DeviceCreationData,DeviceData>($"api/partners/saas/tenants/{ base.ConvertDataToUrlFragment(tenantId, tenantId.GetType()) }/devices",data);
 		}
 
 	}
