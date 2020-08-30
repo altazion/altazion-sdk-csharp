@@ -42,21 +42,21 @@ namespace Altazion.Api.Serveur.Parametres
 			return base.Put<ObjetCreationEvenementMagasin,bool>($"app/magasins/{ base.ConvertDataToUrlFragment(magasinguid, magasinguid.GetType()) }/evenements",obj);
 		}
 
-		/// <summary>
-		/// Modifie un évènement magasin
-		///</summary>
-		public bool Modifier(Guid evmguid, ObjetCreationEvenementMagasin obj)
-		{
-			return base.Patch<ObjetCreationEvenementMagasin,bool>($"app/magasins/{ base.ConvertDataToUrlFragment(magasinguid, magasinguid.GetType()) }/evenements/{ base.ConvertDataToUrlFragment(evmguid, evmguid.GetType()) }",obj);
-		}
+		///// <summary>
+		///// Modifie un évènement magasin
+		/////</summary>
+		//public bool Modifier(Guid evmguid, ObjetCreationEvenementMagasin obj)
+		//{
+		//	return base.Patch<ObjetCreationEvenementMagasin,bool>($"app/magasins/{ base.ConvertDataToUrlFragment(magasinguid, magasinguid.GetType()) }/evenements/{ base.ConvertDataToUrlFragment(evmguid, evmguid.GetType()) }",obj);
+		//}
 
-		/// <summary>
-		/// Archive un évènement magasin
-		///</summary>
-		public bool Archiver(Guid evmguid)
-		{
-			return base.Delete<bool>($"app/magasins/{ base.ConvertDataToUrlFragment(magasinguid, magasinguid.GetType()) }/evenements/{ base.ConvertDataToUrlFragment(evmguid, evmguid.GetType()) }");
-		}
+		///// <summary>
+		///// Archive un évènement magasin
+		/////</summary>
+		//public bool Archiver(Guid evmguid)
+		//{
+		//	return base.Delete<bool>($"app/magasins/{ base.ConvertDataToUrlFragment(magasinguid, magasinguid.GetType()) }/evenements/{ base.ConvertDataToUrlFragment(evmguid, evmguid.GetType()) }");
+		//}
 
 		/// <summary>
 		/// Inscrit un magasin à un évènement Cross Canal

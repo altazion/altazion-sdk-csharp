@@ -61,6 +61,12 @@ namespace Altazion.Api
             return JsonConvert.DeserializeObject<R>(reply);
         }
 
+
+        protected R Put<R>(string apiUrl) 
+        {
+            return Put<object, R>(Connection, apiUrl, null);
+        }
+
         protected string Put<T>(string apiUrl, T data) where T : class
         {
             return Put<T>(Connection, apiUrl, data);

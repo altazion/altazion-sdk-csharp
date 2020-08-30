@@ -26,13 +26,13 @@ namespace Altazion.Api.Serveur.Commercial
 			return base.Post<ContenuData,bool>($"app/commercial/contenus",data);
 		}
 
-		/// <summary>
-		/// Supprime un contenu article
-		///</summary>
-		public bool SupprimerContenuArticle()
-		{
-			return base.Delete<ContenuData,bool>($"app/commercial/contenus",data);
-		}
+		///// <summary>
+		///// Supprime un contenu article
+		/////</summary>
+		//public bool SupprimerContenuArticle()
+		//{
+		//	return base.Delete<ContenuData,bool>($"app/commercial/contenus",data);
+		//}
 
 	}
 }
